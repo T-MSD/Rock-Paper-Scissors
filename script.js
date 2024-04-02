@@ -11,42 +11,24 @@
   }
 
   function playRound(player) {
-    const computer = getComputerChoice();
-    if (player.toLowerCase() === computer.toLowerCase()) {
+    const computer = getComputerChoice().toLowerCase();
+    const playerChoice = player.toLowerCase();
+    if (playerChoice === computer) {
       return 'It\'s a tie!';
     }
-
-    if (player.toLowerCase() === 'rock') {
-      if (computer.toLowerCase() === 'scissors') {
+    if (
+        (playerChoice === 'rock' && computer === 'scissors') || 
+        (playerChoice === 'paper' && computer === 'rock') ||
+        (playerChoice === 'scissors' && computer === 'paper')){
         playerScore++;
-        return 'You win! Rock beats scissors.';
-      } 
-      else {
+        return 'You win!';
+    } 
+    if (
+        (playerChoice === 'rock' && computer === 'paper') ||
+        (playerChoice === 'paper' && computer === 'scissors') ||
+        (playerChoice === 'scissors' && computer === 'rock')){
         computerScore++;
-        return 'You lose! Paper beats rock.';
-      }
-    }
-
-    if (player.toLowerCase() === 'paper') {
-      if (computer.toLowerCase() === 'rock') {
-        playerScore++;
-        return 'You win! Paper beats rock.';
-      } 
-      else {
-        computerScore++;
-        return 'You lose! Scissors beats paper.';
-      }
-    }
-
-    if (player.toLowerCase() === 'scissors') {
-      if (computer.toLowerCase() === 'paper') {
-        playerScore++;
-        return 'You win! Scissors beats paper.';
-      } 
-      else {
-        computerScore++;
-        return 'You lose! Rock beats scissors.';
-      }
+        return 'You lose!';
     }
   }
 
