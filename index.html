@@ -3,30 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
-    <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
+    <div>
+      <div class="buttons">
+          <button id="rock">Rock</button>
+          <button id="paper">Paper</button>
+          <button id="scissors">Scissors</button>
+      </div>
 
-    <div class="score">
-        <div class="playerScore">
-            <p id="pScore">Player Score: 0</p>
-        </div>
-        <div class="computerScore">
-            <p id="cScore">Computer Score: 0</p>
-        </div>
-    </div>
+      <div class="score">
+          <div class="playerScore">
+              <p id="pScore">Player Score: 0</p>
+          </div>
+          <div class="computerScore">
+              <p id="cScore">Computer Score: 0</p>
+          </div>
+      </div>
 
-    <div class="result">
-        <p id="displayResult">Winner: </p>
-    </div>
+      <div class="result">
+          <p id="displayResult">Winner: </p>
+      </div>
 
-    <div class="restart">
-        <button id="restartBtn">Restart Game</button>
+      <div class="restart">
+          <button class="nes-btn is-warning" id="restartBtn">Restart Game</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
