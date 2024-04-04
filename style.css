@@ -1,3 +1,30 @@
 body {
   background-color: #25316F;
+  display: flex;
+}
+
+img{
+  width: 200px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.nes-btn {
+  margin: 20px;
+}
+
+.nes-container.is-rounded{
+  color: white;
+  margin: 50px;
+}
+
+.restartBtn {
+  display: flex;
+  justify-content: center;
 }

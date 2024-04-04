@@ -9,10 +9,12 @@ btnRestart.addEventListener('click', () => restartGame());
 
 const pScore = document.querySelector('#pScore');
 const cScore = document.querySelector('#cScore');
-const dResult = document.querySelector('#displayResult')
+const winner = document.querySelector('#winner')
+const tCounter = document.querySelector('#tCounter')
 
 let playerScore = 0;
 let computerScore = 0;
+let tieCounter = 0;
 
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
@@ -31,6 +33,7 @@ function playRound(player) {
     const computer = getComputerChoice().toLowerCase();
     const playerChoice = player.toLowerCase();
     if (playerChoice === computer) {
+      tieCounter++;
       return 'It\'s a tie!';
     }
     if (
@@ -65,17 +68,21 @@ function endGame(){
 
 function displayResult(){
   return playerScore > computerScore 
-  ?  dResult.textContent = 'Winner: Player'
-  :  dResult.textContent = 'Winner: Computer';
+  ?  winner.textContent = 'Winner: Player'
+  :  winner.textContent = 'Winner: Computer';
 }
 
 function updatePoints(){
   pScore.textContent = "Player Score: " + playerScore;
   cScore.textContent = "Computer Score: " + computerScore;
+  tCounter.textContent = 'Ties: ' + tieCounter
 }
 
 function restartGame(){
   playerScore = 0;
   computerScore = 0;
+  tieCounter = 0;
+  winner.textContent = 'Winner: '
+  tCounter.textContent = 'Ties: 0'
   updatePoints();
 }
