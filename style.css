@@ -1,6 +1,9 @@
 body {
   background-color: #25316F;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 img{
@@ -15,6 +18,10 @@ img{
   margin-top: 50px;
 }
 
+.buttons img {
+  transform: scale(0.7);
+}
+
 .nes-btn {
   margin: 20px;
 }
@@ -24,7 +31,37 @@ img{
   margin: 50px;
 }
 
-.restartBtn {
+
+.popup{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) scale(0.1); 
+  width: 400px;
+  height: 200px;
+  background: #0C1337;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-popup {
+  visibility: hidden;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.unblur {
+  filter: none;
 }
