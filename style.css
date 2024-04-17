@@ -47,6 +47,7 @@ img{
   border-radius: 10px;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  color: white;
 }
 
 .open-popup {

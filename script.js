@@ -9,10 +9,10 @@ btnRestart.addEventListener('click', () => restartGame());
 
 const pScore = document.querySelector('#pScore');
 const cScore = document.querySelector('#cScore');
-const winner = document.querySelector('#winner');
 const tCounter = document.querySelector('#tCounter');
 const popup = document.querySelector('#popup');
 const container = document.querySelector('#container');
+const popupW = document.querySelector('#popupWinner')
 
 let playerScore = 0;
 let computerScore = 0;
@@ -71,8 +71,8 @@ function endGame(){
 function displayResult(){
   openPopup();
   return playerScore > computerScore 
-  ?  winner.textContent = 'Winner: Player'
-  :  winner.textContent = 'Winner: Computer';
+  ?  popupW.textContent = 'Winner: Player'
+  :  popupW.textContent = 'Winner: Computer';
 }
 
 function updatePoints(){
@@ -86,7 +86,7 @@ function restartGame(){
   playerScore = 0;
   computerScore = 0;
   tieCounter = 0;
-  winner.textContent = 'Winner: '
+  popupW.textContent = ''
   tCounter.textContent = 'Ties: 0'
   updatePoints();
 }
