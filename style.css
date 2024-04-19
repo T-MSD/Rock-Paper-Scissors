@@ -31,6 +31,13 @@ img{
   margin: 50px;
 }
 
+.footer {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
 .popup{
   position: absolute;
