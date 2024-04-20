@@ -43,9 +43,12 @@ img{
   transform: scale(0.7);
 }
 
+#rock, #paper, #scissors {
+  width: 33%;
+}
+
 .nes-btn {
   margin: 20px;
-  width: 33%;
 }
 
 .nes-container.is-rounded{
